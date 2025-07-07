@@ -38,6 +38,8 @@ if not (hasattr(utils, 'deep_get') and hasattr(utils, 'deep_set')):
 
 # 然后再从 utils 模块导入 deep_get 和 deep_set
 from module.config.utils import deep_get, deep_set
+from module.config.deep import deep_get
+
 
 class LogRes:
     """
@@ -110,3 +112,4 @@ if __name__ == '__main__':
     LogRes(config=config).ActionPoint = {'Total': 99999, 'Value': 99999}
     config.update()
     exit(0)
+
