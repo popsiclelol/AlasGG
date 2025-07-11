@@ -167,7 +167,7 @@ class DeployConfig(ConfigModel):
 
     @cached_property
     def python(self) -> str:
-        exe = self.filepath(self.PythonExecutable)
+        exe = self.filepath("PythonExecutable")
         if os.path.exists(exe):
             return exe
 
