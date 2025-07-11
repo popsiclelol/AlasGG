@@ -25,5 +25,4 @@ echo.
 python gui.py
 
 PROMPT $P$_$G$G$G
-
 cmd /Q /K
