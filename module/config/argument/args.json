@@ -1831,22 +1831,10 @@
           "z20_or_z21"
         ]
       },
-      "ALLowLowVanguardLevel": {
-        "type": "checkbox",
-        "value": true
-      },
-      "FleetNumberInHardMode": {
-        "type": "select",
-        "value": 0,
-        "option": [
-          0,
-          1,
-          2
-        ]
-      },
-      "StopIFAutoNotEnsured": {
-        "type": "checkbox",
-        "value": true
+      "EquipmentCode": {
+        "type": "textarea",
+        "value": "DD: null\nbogue: null\nhermes: null\nlangley: null\nranger: null",
+        "mode": "yaml"
       },
       "CommissionLimit": {
         "type": "checkbox",

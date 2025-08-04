@@ -381,9 +381,7 @@
       "CommonCV": "any",
       "ChangeVanguard": "ship",
       "CommonDD": "any",
-      "ALLowLowVanguardLevel": true,
-      "FleetNumberInHardMode": 0,
-      "StopIFAutoNotEnsured": true,
+      "EquipmentCode": "DD: null\nbogue: null\nhermes: null\nlangley: null\nranger: null",
       "CommissionLimit": true
     },
     "Campaign": {
