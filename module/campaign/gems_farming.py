@@ -313,7 +313,7 @@ class GemsFarming(CampaignRun, FleetEquipment, Dock):
 
         scanner = ShipScanner(level=(max_level, max_level), 
                               emotion=(self.emotion_lower_bound, 150),
-                              fleet=self.fleet_to_attack, status='free')
+                              fleet=[0, self.fleet_to_attack], status='free')
 
         scanner.disable('rarity')
 

@@ -3,6 +3,7 @@ from module.map.map_base import CampaignMap
 from module.map.map_grids import SelectedGrids, RoadGrids
 from module.logger import logger
 from .ts1 import Config as ConfigBase
+from .campaign_base import CampaignBaseTS
 
 MAP = CampaignMap('TS4')
 MAP.shape = 'I8'
@@ -68,7 +69,7 @@ class Config(ConfigBase):
     MAP_SWIPE_MULTIPLY_MAATOUCH = (1.027, 1.046)
 
 
-class Campaign(CampaignBase):
+class Campaign(CampaignBaseTS):
     MAP = MAP
     ENEMY_FILTER = '1L > 1M > 1E > 1C > 2L > 2M > 2E > 2C > 3L > 3M > 3E > 3C'
 

@@ -69,3 +69,6 @@ class CampaignBaseTS(CampaignBaseT):
         self.map_is_100_percent_clear = self.map_is_3_stars = self.map_is_threat_safe = appear
         self.map_has_clear_mode = appear
         self.map_show_info()
+
+CampaignBase = CampaignBaseT
+__all__ = ['CampaignBaseT', 'CampaignBaseTS', 'CampaignBase']

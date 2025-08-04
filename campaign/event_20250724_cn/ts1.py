@@ -2,6 +2,7 @@ from .campaign_base import CampaignBase
 from module.map.map_base import CampaignMap
 from module.map.map_grids import SelectedGrids, RoadGrids
 from module.logger import logger
+from .campaign_base import CampaignBaseTS
 
 MAP = CampaignMap('TS1')
 MAP.shape = 'I8'
@@ -87,7 +88,7 @@ class Config:
     MAP_SWIPE_MULTIPLY_MAATOUCH = (1.003, 1.021)
 
 
-class Campaign(CampaignBase):
+class Campaign(CampaignBaseTS):
     MAP = MAP
     ENEMY_FILTER = '1L > 1M > 1E > 1C > 2L > 2M > 2E > 2C > 3L > 3M > 3E > 3C'
 
@@ -109,3 +110,4 @@ class Campaign(CampaignBase):
 
     def battle_6(self):
         return self.fleet_boss.clear_boss()
+
