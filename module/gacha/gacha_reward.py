@@ -332,10 +332,7 @@ class RewardGacha(GachaUI, Retirement):
             buy[0] = self.build_ticket_count
             # Calculate rolls allowed based on configurations and resources
 
-            buy[1] = self.gacha_calculate(self.config.Gacha_Amount-self.build_ticket_count, gold_cost, cube_cost)
-        else:
-            LogRes(self.config).Cube = self.build_cube_count
-            self.config.update()
+            buy[1] = self.gacha_calculate(self.config.Gacha_Amount - self.build_ticket_count, gold_cost, cube_cost)
 
 
         # Submit 'buy_count' and execute if capable
