@@ -9,6 +9,7 @@ from module.logger import logger
 from module.ocr.ocr import Digit
 from module.retire.retirement import Retirement
 import module.config.server as server
+from module.log_res.log_res import LogRes
 
 if server.server != 'jp':
     OCR_COIN = Digit(OCR_COIN, name='OCR_COIN', letter=(247, 247, 247), threshold=128)
