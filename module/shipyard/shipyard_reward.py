@@ -2,7 +2,7 @@ from datetime import datetime
 from module.base.timer import Timer
 from module.campaign.assets import OCR_OIL_CHECK
 from module.campaign.campaign_status import OCR_COIN
-
+from module.ocr.ocr import Digit
 from module.exception import ScriptError
 from module.logger import logger
 from module.shipyard.ui import ShipyardUI
