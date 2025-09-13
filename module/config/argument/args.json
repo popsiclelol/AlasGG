@@ -2075,7 +2075,8 @@
           "use_open_ocean_support"
         ],
         "display": "hide"
-      },
+      }
+    },
     "Emotion": {
       "Mode": {
         "type": "select",
@@ -10425,5 +10426,4 @@
       }
     }
   }
-}
 }
