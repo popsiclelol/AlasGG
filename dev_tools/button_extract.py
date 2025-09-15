@@ -12,6 +12,7 @@ from module.logger import logger
 MODULE_FOLDER = './module'
 BUTTON_FILE = 'assets.py'
 IMPORT_EXP = """
+import numpy as np
 from module.base.button import Button
 from module.base.template import Template
 
