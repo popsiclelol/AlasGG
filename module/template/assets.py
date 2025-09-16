@@ -1,4 +1,3 @@
-import numpy as np
 from module.base.button import Button
 from module.base.template import Template
 
