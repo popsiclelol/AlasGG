@@ -9,6 +9,7 @@ from module.shipyard.ui import ShipyardUI
 from module.ui.page import page_reshmenu, page_shipyard
 from module.config.utils import get_server_last_update
 import module.config.server as server
+from module.ui.page import page_main, page_shipyard
 
 if server.server != 'jp':
     OCR_COIN = Digit(OCR_COIN, name='OCR_COIN', letter=(247, 247, 247), threshold=128)
