@@ -366,18 +366,11 @@ class OperationSiren(OSMap):
                 # When not running CL1 and use oil
                 keep_current_ap = True
                 check_rest_ap = True
-                if not self.is_cl1_enabled and self.config.OpsiGeneral_BuyActionPointLimit > 0:
-                    keep_current_ap = False
                 if self.is_cl1_enabled and self.get_yellow_coins() >= self.config.OS_CL1_YELLOW_COINS_PRESERVE:
                     check_rest_ap = False
-                    try:
-                        self.action_point_set(cost=0, keep_current_ap=keep_current_ap, check_rest_ap=check_rest_ap)
-                    except ActionPointLimit:
-                        self.config.task_delay(server_update=True)
-                        self.config.task_call('OpsiHazard1Leveling')
-                        self.config.task_stop()
-                else:
-                    self.action_point_set(cost=0, keep_current_ap=keep_current_ap, check_rest_ap=check_rest_ap)
+                if not self.is_cl1_enabled and self.config.OpsiGeneral_BuyActionPointLimit > 0:
+                    keep_current_ap = False
+                self.action_point_set(cost=0, keep_current_ap=keep_current_ap, check_rest_ap=check_rest_ap)
                 ap_checked = True
 
             # (1252, 1012) is the coordinate of zone 134 (the center zone) in os_globe_map.png
