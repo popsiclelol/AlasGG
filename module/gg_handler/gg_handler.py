@@ -4,7 +4,9 @@ from module.gg_handler.gg_u2 import GGU2
 from module.logger import logger
 from module.base.timer import timeout
 import module.config.utils as utils
-import time
+
+# 导入 time 模块的函数
+from time import sleep, time
 
 # 如果 utils 模块中没有 deep_get 和 deep_set，则动态定义并注入
 if not (hasattr(utils, 'deep_get') and hasattr(utils, 'deep_set')):
@@ -51,8 +53,6 @@ class GGHandler:
         device: Device
     """
 
-       
-
     def __init__(self, config=None, device=None):
         self.config = config
         self.device = device
@@ -80,7 +80,7 @@ class GGHandler:
                 logger.exception(e)
             attempt_count += 1
             logger.info(f"Restart attempt {attempt_count} failed. Retrying after a delay...")
-            time.sleep(5)
+            sleep(5)  # 改为直接使用 sleep()
 
     def set(self, mode=True):
         """
