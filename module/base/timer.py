@@ -52,20 +52,21 @@ def timeout(func, timeout_sec=30.0, *args, **kwargs):
     from module.logger import logger
 
     def function_timeout(func):
-    t0 = time()  # 使用直接导入的 time() 函数
-    success = True
-    p = Thread(target=func, args=args, kwargs=kwargs)
-    p.daemon = True
-    p.start()
-    p.join(timeout_sec)
-    if p.is_alive():
-        success = False
-    t1 = time()  # 使用直接导入的 time() 函数
-    if round(t1 - t0, 3) > timeout_sec:
-        success = False
-    logger.info(f'Function {func.__name__} timeout: {not success}, cost: {round(t1 - t0, 3)}/{timeout_sec}')
-    return success
+        t0 = time()
+        success = True
+        p = Thread(target=func, args=args, kwargs=kwargs)
+        p.daemon = True
+        p.start()
+        p.join(timeout_sec)
+        if p.is_alive():
+            success = False
+        t1 = time()
+        if round(t1 - t0, 3) > timeout_sec:
+            success = False
+        logger.info(f'Function {func.__name__} timeout: {not success}, cost: {round(t1 - t0, 3)}/{timeout_sec}')
+        return success
 
+    return function_timeout(func)
 
 def timer(function):
     """
