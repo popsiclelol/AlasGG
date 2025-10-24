@@ -52,7 +52,7 @@ def timeout(func, timeout_sec=30.0, *args, **kwargs):
     from module.logger import logger
 
     def function_timeout(func):
-        t0 = time.time()
+        t0 = time()
         success = True
         p = Thread(target=func, args=args, kwargs=kwargs)
         p.start()
