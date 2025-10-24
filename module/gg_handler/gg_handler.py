@@ -4,6 +4,7 @@ from module.gg_handler.gg_u2 import GGU2
 from module.logger import logger
 from module.base.timer import timeout
 import module.config.utils as utils
+import time
 
 # 如果 utils 模块中没有 deep_get 和 deep_set，则动态定义并注入
 if not (hasattr(utils, 'deep_get') and hasattr(utils, 'deep_set')):
