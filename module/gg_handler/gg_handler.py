@@ -64,26 +64,26 @@ class GGHandler:
                                default='screenshot')
 
     def restart(self, crashed=False):
-    from module.handler.login import LoginHandler
-    from module.exception import GameStuckError
-    _crashed = crashed
-    attempt_count = 0 
-    while True:  # 使用无限循环
-        try:
-            # 修改这里：如果 timeout 返回 False（表示成功），则跳出循环
-            if timeout(LoginHandler(config=self.config, device=self.device).app_restart, timeout_sec=600):
-                logger.info(f"Game restarted successfully after {attempt_count + 1} attempts.")
-                break
-            else:
-                # 如果返回 True（表示超时），继续重试
-                logger.warning("App restart timeout, retrying...")
-        except (GameStuckError) as e:
-            logger.error(f"Game restart failed on attempt {attempt_count + 1}: {e}. Retrying...")
-        except Exception as e:
-            logger.exception(e)
-        attempt_count += 1
-        logger.info(f"Restart attempt {attempt_count} failed. Retrying after a delay...")
-        sleep(5)
+        from module.handler.login import LoginHandler
+        from module.exception import GameStuckError
+        _crashed = crashed
+        attempt_count = 0 
+        while True:  # 使用无限循环
+            try:
+                # 修改这里：如果 timeout 返回 False（表示成功），则跳出循环
+                if timeout(LoginHandler(config=self.config, device=self.device).app_restart, timeout_sec=600):
+                    logger.info(f"Game restarted successfully after {attempt_count + 1} attempts.")
+                    break
+                else:
+                    # 如果返回 True（表示超时），继续重试
+                    logger.warning("App restart timeout, retrying...")
+            except (GameStuckError) as e:
+                logger.error(f"Game restart failed on attempt {attempt_count + 1}: {e}. Retrying...")
+            except Exception as e:
+                logger.exception(e)
+            attempt_count += 1
+            logger.info(f"Restart attempt {attempt_count} failed. Retrying after a delay...")
+            sleep(5)
         
     def set(self, mode=True):
         """
