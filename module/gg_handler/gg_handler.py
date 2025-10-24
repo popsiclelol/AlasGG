@@ -2,9 +2,11 @@ from module.gg_handler.gg_data import GGData
 from module.gg_handler.gg_u2 import GGU2
 # from module.gg_handler.gg_screenshot import GGScreenshot
 from module.logger import logger
-from module.base.timer import Timer
+from module.base.timer import timeout
 import module.config.utils as utils
-from threading import Thread
+
+# 导入 time 模块的函数
+from time import sleep, time
 
 # 如果 utils 模块中没有 deep_get 和 deep_set，则动态定义并注入
 if not (hasattr(utils, 'deep_get') and hasattr(utils, 'deep_set')):
@@ -42,31 +44,6 @@ if not (hasattr(utils, 'deep_get') and hasattr(utils, 'deep_set')):
 # 然后再从 utils 模块导入 deep_get 和 deep_set
 from module.config.utils import deep_get, deep_set
 
-def timeout(func, timeout_sec=30.0, *args, **kwargs):
-    """
-    使用 Timer 实现一个简易 timeout。
-    如果函数在指定时间内没执行完，就返回 True（表示超时）。
-    否则返回 False（表示成功）。
-    """
-    result = {"done": False}
-
-    def target():
-        try:
-            func(*args, **kwargs)
-        finally:
-            result["done"] = True
-
-    thread = Thread(target=target)
-    thread.start()
-
-    timer = Timer(timeout_sec).start()
-    while not result["done"]:
-        if timer.reached():  # 超时
-            logger.warning(f"Timeout: {func.__name__} exceeded {timeout_sec}s")
-            return True
-        # 为了避免CPU占用太高，稍微sleep一下
-        timer.wait()  # 或者改成 time.sleep(0.1)
-    return False
 
 class GGHandler:
     """
@@ -75,8 +52,6 @@ class GGHandler:
         config: AzurlaneConfig
         device: Device
     """
-
-       
 
     def __init__(self, config=None, device=None):
         self.config = config
@@ -95,18 +70,21 @@ class GGHandler:
         attempt_count = 0 
         while True:  # 使用无限循环
             try:
-                if not timeout(LoginHandler(config=self.config, device=self.device).app_restart, timeout_sec=600):
+                # 修改这里：如果 timeout 返回 False（表示成功），则跳出循环
+                if timeout(LoginHandler(config=self.config, device=self.device).app_restart, timeout_sec=600):
                     logger.info(f"Game restarted successfully after {attempt_count + 1} attempts.")
                     break
-                raise RuntimeError
+                else:
+                    # 如果返回 True（表示超时），继续重试
+                    logger.warning("App restart timeout, retrying...")
             except (GameStuckError) as e:
                 logger.error(f"Game restart failed on attempt {attempt_count + 1}: {e}. Retrying...")
             except Exception as e:
                 logger.exception(e)
             attempt_count += 1
             logger.info(f"Restart attempt {attempt_count} failed. Retrying after a delay...")
-            Timer(5).start().wait()
-
+            sleep(5)
+        
     def set(self, mode=True):
         """
             Set the GG status to True/False.
