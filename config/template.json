@@ -382,6 +382,7 @@
       "ChangeVanguard": "ship",
       "CommonDD": "any",
       "EquipmentCode": "DD: null\nbogue: null\nhermes: null\nlangley: null\nranger: null",
+      "FleetNumberInHardMode": 0,
       "StopIFAutoNotEnsured": true,
       "CommissionLimit": true
     },
