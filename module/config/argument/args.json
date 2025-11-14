@@ -1859,25 +1859,25 @@
         "type": "select",
         "value": "campaign_main",
         "option": [
-          "event_20230914_cn",
-          "event_20250227_cn"
+          "event_20250912_cn",
+          "event_20251023_cn"
         ],
         "display": "hide",
         "option_cn": [
-          "event_20230914_cn"
+          "event_20251023_cn"
         ],
         "option_en": [
-          "event_20230914_cn"
+          "event_20251023_cn"
         ],
         "option_jp": [
-          "event_20230914_cn"
+          "event_20251023_cn"
         ],
         "option_tw": [
-          "event_20250227_cn"
+          "event_20250912_cn"
         ],
         "option_bold": [
-          "event_20230914_cn",
-          "event_20250227_cn"
+          "event_20250912_cn",
+          "event_20251023_cn"
         ]
       },
       "Mode": {
@@ -2659,24 +2659,24 @@
         "type": "state",
         "value": "campaign_main",
         "option": [
-          "event_20230914_cn",
-          "event_20250227_cn"
+          "event_20250912_cn",
+          "event_20251023_cn"
         ],
         "option_cn": [
-          "event_20230914_cn"
+          "event_20251023_cn"
         ],
         "option_en": [
-          "event_20230914_cn"
+          "event_20251023_cn"
         ],
         "option_jp": [
-          "event_20230914_cn"
+          "event_20251023_cn"
         ],
         "option_tw": [
-          "event_20250227_cn"
+          "event_20250912_cn"
         ],
         "option_bold": [
-          "event_20230914_cn",
-          "event_20250227_cn"
+          "event_20250912_cn",
+          "event_20251023_cn"
         ]
       },
       "Mode": {
@@ -4115,6 +4115,78 @@
       }
     }
   },
+  "EventShop": {
+    "Scheduler": {
+      "Enable": {
+        "type": "checkbox",
+        "value": false,
+        "option": [
+          true,
+          false
+        ]
+      },
+      "NextRun": {
+        "type": "datetime",
+        "value": "2020-01-01 00:00:00",
+        "validate": "datetime"
+      },
+      "Command": {
+        "type": "input",
+        "value": "EventShop",
+        "display": "hide"
+      },
+      "SuccessInterval": {
+        "type": "input",
+        "value": 30,
+        "display": "hide"
+      },
+      "FailureInterval": {
+        "type": "input",
+        "value": 30,
+        "display": "hide"
+      },
+      "ServerUpdate": {
+        "type": "input",
+        "value": "00:00",
+        "display": "hide"
+      }
+    },
+    "EventShop": {
+      "UnlockSSRShip": {
+        "type": "checkbox",
+        "value": true
+      },
+      "BuyURShip": {
+        "type": "select",
+        "value": 2,
+        "option": [
+          0,
+          1,
+          2
+        ]
+      },
+      "PresetFilter": {
+        "type": "select",
+        "value": "all",
+        "option": [
+          "all",
+          "custom"
+        ]
+      },
+      "CustomFilter": {
+        "type": "textarea",
+        "value": "EquipUR > EquipSSR > Cube > GachaTicket\n> Array > Chip > CatT3 \n> Meta > SkinBox\n> Oil > Coin > Medal > ExpBookT1 > FoodT1\n> DR > PR\n> AugmentCore > AugmentEnhanceT2 > AugmentChangeT2 > AugmentChangeT1\n> CatT2 > CatT1 > PlateGeneralT3 > PlateT3 > BoxT4\n> ShipSSR"
+      }
+    },
+    "Storage": {
+      "Storage": {
+        "type": "storage",
+        "value": {},
+        "valuetype": "ignore",
+        "display": "disabled"
+      }
+    }
+  },
   "WarArchives": {
     "Scheduler": {
       "Enable": {
@@ -4200,11 +4272,9 @@
           "war_archives_20220428_cn",
           "war_archives_20220526_cn",
           "war_archives_20220728_cn",
-          "war_archives_20220915_cn",
           "war_archives_20231026_cn"
         ],
         "option_cn": [
-          "war_archives_20220915_cn",
           "war_archives_20231026_cn",
           "war_archives_20220428_cn",
           "war_archives_20220728_cn",
@@ -4248,7 +4318,6 @@
           "war_archives_20181020_en"
         ],
         "option_en": [
-          "war_archives_20220915_cn",
           "war_archives_20231026_cn",
           "war_archives_20220428_cn",
           "war_archives_20220728_cn",
@@ -4292,7 +4361,6 @@
           "war_archives_20181020_en"
         ],
         "option_jp": [
-          "war_archives_20220915_cn",
           "war_archives_20231026_cn",
           "war_archives_20220428_cn",
           "war_archives_20220728_cn",
@@ -4336,7 +4404,6 @@
           "war_archives_20181020_en"
         ],
         "option_tw": [
-          "war_archives_20220915_cn",
           "war_archives_20231026_cn",
           "war_archives_20220428_cn",
           "war_archives_20220728_cn",
@@ -4766,24 +4833,24 @@
         "type": "state",
         "value": "campaign_main",
         "option": [
-          "event_20230914_cn",
-          "event_20250227_cn"
+          "event_20250912_cn",
+          "event_20251023_cn"
         ],
         "option_cn": [
-          "event_20230914_cn"
+          "event_20251023_cn"
         ],
         "option_en": [
-          "event_20230914_cn"
+          "event_20251023_cn"
         ],
         "option_jp": [
-          "event_20230914_cn"
+          "event_20251023_cn"
         ],
         "option_tw": [
-          "event_20250227_cn"
+          "event_20250912_cn"
         ],
         "option_bold": [
-          "event_20230914_cn",
-          "event_20250227_cn"
+          "event_20250912_cn",
+          "event_20251023_cn"
         ]
       },
       "Mode": {
@@ -5178,24 +5245,24 @@
         "type": "state",
         "value": "campaign_main",
         "option": [
-          "event_20230914_cn",
-          "event_20250227_cn"
+          "event_20250912_cn",
+          "event_20251023_cn"
         ],
         "option_cn": [
-          "event_20230914_cn"
+          "event_20251023_cn"
         ],
         "option_en": [
-          "event_20230914_cn"
+          "event_20251023_cn"
         ],
         "option_jp": [
-          "event_20230914_cn"
+          "event_20251023_cn"
         ],
         "option_tw": [
-          "event_20250227_cn"
+          "event_20250912_cn"
         ],
         "option_bold": [
-          "event_20230914_cn",
-          "event_20250227_cn"
+          "event_20250912_cn",
+          "event_20251023_cn"
         ]
       },
       "Mode": {
@@ -5590,24 +5657,24 @@
         "type": "state",
         "value": "campaign_main",
         "option": [
-          "event_20230914_cn",
-          "event_20250227_cn"
+          "event_20250912_cn",
+          "event_20251023_cn"
         ],
         "option_cn": [
-          "event_20230914_cn"
+          "event_20251023_cn"
         ],
         "option_en": [
-          "event_20230914_cn"
+          "event_20251023_cn"
         ],
         "option_jp": [
-          "event_20230914_cn"
+          "event_20251023_cn"
         ],
         "option_tw": [
-          "event_20250227_cn"
+          "event_20250912_cn"
         ],
         "option_bold": [
-          "event_20230914_cn",
-          "event_20250227_cn"
+          "event_20250912_cn",
+          "event_20251023_cn"
         ]
       },
       "Mode": {
@@ -6002,24 +6069,24 @@
         "type": "state",
         "value": "campaign_main",
         "option": [
-          "event_20230914_cn",
-          "event_20250227_cn"
+          "event_20250912_cn",
+          "event_20251023_cn"
         ],
         "option_cn": [
-          "event_20230914_cn"
+          "event_20251023_cn"
         ],
         "option_en": [
-          "event_20230914_cn"
+          "event_20251023_cn"
         ],
         "option_jp": [
-          "event_20230914_cn"
+          "event_20251023_cn"
         ],
         "option_tw": [
-          "event_20250227_cn"
+          "event_20250912_cn"
         ],
         "option_bold": [
-          "event_20230914_cn",
-          "event_20250227_cn"
+          "event_20250912_cn",
+          "event_20251023_cn"
         ]
       },
       "Mode": {
@@ -6404,24 +6471,24 @@
         "type": "state",
         "value": "campaign_main",
         "option": [
-          "event_20230914_cn",
-          "event_20250227_cn"
+          "event_20250912_cn",
+          "event_20251023_cn"
         ],
         "option_cn": [
-          "event_20230914_cn"
+          "event_20251023_cn"
         ],
         "option_en": [
-          "event_20230914_cn"
+          "event_20251023_cn"
         ],
         "option_jp": [
-          "event_20230914_cn"
+          "event_20251023_cn"
         ],
         "option_tw": [
-          "event_20250227_cn"
+          "event_20250912_cn"
         ],
         "option_bold": [
-          "event_20230914_cn",
-          "event_20250227_cn"
+          "event_20250912_cn",
+          "event_20251023_cn"
         ]
       },
       "Mode": {

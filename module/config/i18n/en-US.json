@@ -94,6 +94,10 @@
       "name": "Maritime Escort",
       "help": ""
     },
+    "EventShop": {
+      "name": "Event Shop",
+      "help": ""
+    },
     "WarArchives": {
       "name": "War Archives",
       "help": "Due to the lack of maintenance of war archives, continuous clear may not work normally, if Alas runs abnormally, Please manually finish clearing and use auto search"
@@ -971,9 +975,9 @@
       "event_20221222_cn": "Parallel Superimposition Rerun",
       "event_20230223_cn": "Revelations of Dust Rerun",
       "event_20230525_cn": "Confluence of Nothingness Rerun",
-      "event_20230803_cn": "Anthem of Remembrance Rerun",
+      "event_20230803_cn": "Anthem of Remembrance",
       "event_20230817_cn": "The Fools Scales Rerun",
-      "event_20230914_cn": "Effulgence Before Eclipse Rerun",
+      "event_20230914_cn": "Effulgence Before Eclipse",
       "event_20231026_cn": "Tempesta and the Fountain of Youth",
       "event_20231123_cn": "The Ninja Scrolls: Azur Flash",
       "event_20231221_cn": "Light-Chasing Sea of Stars",
@@ -1044,7 +1048,6 @@
       "war_archives_20220428_cn": "archives Rondo at Rainbows End",
       "war_archives_20220526_cn": "archives Pledge of the Radiant Court",
       "war_archives_20220728_cn": "archives Aquilifers Ballade",
-      "war_archives_20220915_cn": "archives Violet Tempest Blooming Lycoris",
       "war_archives_20231026_cn": "archives Tempesta and the Fountain of Youth"
     },
     "Mode": {
@@ -1582,6 +1585,33 @@
       "help": "",
       "single": "Solo Challenge",
       "multi": "Coalition Battle"
+    }
+  },
+  "EventShop": {
+    "_info": {
+      "name": "Event Shop Settings",
+      "help": ""
+    },
+    "UnlockSSRShip": {
+      "name": "Unlock SSR Ship",
+      "help": ""
+    },
+    "BuyURShip": {
+      "name": "Buy X UR Ship(s)",
+      "help": "",
+      "0": "0",
+      "1": "1",
+      "2": "2"
+    },
+    "PresetFilter": {
+      "name": "Event Shop Filter",
+      "help": "Generally does not need to be modified.",
+      "all": "All",
+      "custom": "Custom"
+    },
+    "CustomFilter": {
+      "name": "Custom Filter",
+      "help": "To use your own filter, set \"Event Shop Filter\" to \"Custom\". All options have been defined at <https://github.com/LmeSzinc/AzurLaneAutoScript/wiki/filter_string_en>"
     }
   },
   "Commission": {
