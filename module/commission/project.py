@@ -109,7 +109,6 @@ class Commission:
         result = result.replace('NVB', 'NYB')
         # PYEIN PROTECTION COMMISSION I
         result = result.replace('PYEIN', 'VEIN').replace('YEIN', 'VEIN')
-
         self.name = result
         self.genre = self.commission_name_parse(self.name)
 
