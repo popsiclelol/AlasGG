@@ -84,6 +84,12 @@ Event:
       - Coalition
       - StopCondition
       - Emotion
+    Coalition2:
+      - Scheduler
+      - Campaign
+      - Coalition
+      - StopCondition
+      - Emotion
     Event:
       - Scheduler
       - Campaign
